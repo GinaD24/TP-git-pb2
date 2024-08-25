@@ -3,7 +3,7 @@ package interfaz;
 import java.util.Scanner;
 
 public class Ahorcado {
-	
+
 	public static void main(String[] args) {
 		Scanner teclado = new Scanner(System.in);
 		Integer a;
@@ -19,28 +19,34 @@ public class Ahorcado {
 		a = teclado.nextInt();
 		System.out.println("Ingrese el segundo numero");
 		b = teclado.nextInt();
-		
-		switch(opcion) {
-		
+
+		switch (opcion) {
+
 		case 1:
-			resultado = a + b;
+			resultado = sumar(a, b);
 			break;
-			
+
 		case 2:
-			resultado = a - b;
+			resultado = resta(a,b);
 			break;
-		
+
 		case 3:
 			resultado = a * b;
 			break;
-		
+
 		default:
 			resultado = a / b;
-		
-		
+
 		}
-		
-		
+
 		System.out.println("El resultado es " + resultado.toString());
+	}
+
+	private static int sumar(Integer a, Integer b) {
+		return a + b;
+	}
+
+	private static int resta(Integer a, Integer b) {
+		return a - b;
 	}
 }
