@@ -31,7 +31,7 @@ public class Ahorcado {
 			break;
 
 		case 3:
-			resultado = a * b;
+			resultado = multiplicar(a,b);
 			break;
 
 		default:
@@ -48,5 +48,9 @@ public class Ahorcado {
 
 	private static int resta(Integer a, Integer b) {
 		return a - b;
+	}
+
+	private static int multiplicar(Integer a, Integer b) {
+		return a * b;
 	}
 }
