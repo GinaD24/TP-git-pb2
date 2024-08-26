@@ -9,7 +9,7 @@ public class Ahorcado {
 		Integer a;
 		Integer b;
 		Integer opcion;
-		Integer resultado;
+		Integer resultado = null;
 		do {
 			System.out.println(
 					"Ingrese su operación /n 1 para sumar /n 2 para restar /n 3 para multiplicar /n 4 para dividir");
@@ -31,14 +31,18 @@ public class Ahorcado {
 			break;
 
 		case 3:
-			resultado = a * b;
+			resultado = multiplicar(a, b);
+			break;
+			
+		case 4:
+			resultado = dividir(a, b);
 			break;
 
 		default:
-			resultado = a / b;
+			System.out.println("Ingrese un numero valido.");;
 
 		}
-
+		teclado.close();
 		System.out.println("El resultado es " + resultado.toString());
 	}
 
@@ -48,5 +52,11 @@ public class Ahorcado {
 
 	private static int resta(Integer a, Integer b) {
 		return a - b;
+	}
+	private static int multiplicar(Integer a, Integer b) {
+		return a * b;
+	}
+	private static int dividir(Integer a, Integer b) {
+		return a / b;
 	}
 }
